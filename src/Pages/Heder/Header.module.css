@@ -1,0 +1,52 @@
+
+  .header {
+    grid-area: h;
+    
+    /* background-color: aqua; */
+    }
+
+    .header{
+      padding: 0 1rem;
+      background-color: rgb(14, 8, 8);
+
+    }
+   
+
+    .header a{
+      display: inline-block;
+      text-decoration: none;
+      color:azure;
+      padding:  1rem;
+      
+
+    }
+
+    .active{
+      background-color: rgb(74, 68, 68);
+      color:rgb(114, 36, 36);
+    }
+    
+    /* .container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px;
+    
+
+  } */
+  
+  /* @media (min-width: 768px) {
+    .container {
+      padding: 40 0px;
+    }
+  } */
+  
+  /* @media (min-width: 1280px) {
+    .container {
+      padding: 0 40px;
+    }
+  } */
+
+  /* .header {
+    padding: 10px;
+    background-color: aqua;
+  } */

@@ -1,0 +1,25 @@
+.nav {
+  grid-area: n;
+
+  color: azure;
+  background-color: rgb(76, 76, 255);
+}
+
+.item a {
+  color: azure;
+  text-decoration: none;
+}
+
+/* .item a.active {
+  color: rgb(209, 45, 255);
+} */
+
+.active {
+    color: rgb(209, 45, 255);
+  }
+
+
+
+ul {
+  list-style: none;
+}

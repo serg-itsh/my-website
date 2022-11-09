@@ -1,3 +1,47 @@
 .app_wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px;
+    
     display: grid;
+
+    grid-template-areas:
+    "h h"
+    "n c"
+    "f f";
+     grid-template-rows: 80px 1fr;
+      grid-template-columns: 2fr 10fr;
+      grid-gap: 3px;
 }
+
+.app_wrapper-content {
+    grid-area: c;
+
+    height: 70vh;
+
+    background-color: rgb(145, 255, 20);
+}
+
+/* .header {
+grid-area: h;
+
+background-color: aqua;
+} */
+
+/* .nav{
+grid-area: n;
+
+background-color: blue;
+} */
+
+
+
+/*
+em - от текущего шоифта
+% - от родительской ширины
+rem - от стиля html
+vw – 1% ширины окна
+vh – 1% высоты окна
+vmin – наименьшее из (vw, vh), в IE9 обозначается vm
+vmax – наибольшее из (vw, vh)
+*/
