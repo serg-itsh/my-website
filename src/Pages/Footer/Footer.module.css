@@ -2,10 +2,63 @@
   .footer {
     grid-area: f;
 
+    height: 100vh;
+
     color: azure;
     
     background-color: rgb(4, 0, 52);
     }
+
+    .stepsNumbers {
+      display: flex;
+      justify-content: center;
+      margin: 0-16px;
+  }
+
+  .stepsNumber {
+    background: 0 0;
+    cursor: pointer;
+    height: 64px;
+    width: 64px;
+    min-width: 64px;
+    margin: 0 16px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: border-color .35s ease-in-out,background-color .25s ease-in-out;
+}
+
+.stepsNumberValue {
+  font-size: 28px;
+  line-height: 1.14;
+  color: rgba(255,255,255,.5);
+  transition: color .25s ease-in-out;
+}
+
+.stepsNumberTitle {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 8px;
+  font-size: 10px;
+  line-height: 1.3;
+  color: #fff;
+
+  transition: all 1s;
+}
+
+.stepsNumber:hover {
+  background: radial-gradient(50% 50%at 50% 50%,rgba(28,77,220,0) 53.85%,rgba(28,77,220,.35) 100%);
+  border-color: #1c4ddc;
+
+  transition: all .5s;
+  transform: scale(1.1);
+}
 
 /* .container {
     width: 100%;

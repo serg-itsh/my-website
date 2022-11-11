@@ -1,24 +1,39 @@
 .nav {
   grid-area: n;
 
+  /* height: 100vh; */
+
   color: azure;
   background-color: rgb(76, 76, 255);
 }
 
 .item a {
-  color: azure;
+  display: inline-block;
   text-decoration: none;
+  color: azure;
+  padding: 1rem;
+
+  /* color: azure;
+  text-decoration: none; */
 }
 
-/* .item a.active {
-  color: rgb(209, 45, 255);
-} */
+.box {
+  /* padding: 5px; */
+  margin-bottom: 10px;
+  /* background-color: blue; */
+}
 
-.active {
-    color: rgb(209, 45, 255);
-  }
+a.active {
+  background-color: blue;
+  border-bottom: 1px solid rgb(255, 0, 247);
+  color: rgb(108, 255, 45);
 
+  /* box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2); */
+  box-shadow: 8px 24px 5px 1px #252526ad;
 
+  transform: scale(1.1);
+  transition: 0.5s;
+}
 
 ul {
   list-style: none;

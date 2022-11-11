@@ -7,17 +7,25 @@ const Navbar = () => {
     <div className={`${styles.nav}`}>
       <nav className={`${styles.item} `}>
         <ul>
-          <li >
-            <NavLink to='/profile' activeClassName={styles.active}>Profile</NavLink>
+          <li className={styles.box} >
+            <NavLink to='/profile' exact={true} className={({ isActive }) =>
+      isActive ? styles.active : undefined
+    }>Profile</NavLink>
             </li>
-          <li>
-            <NavLink to='/dialogs'>Dialogs</NavLink>
+          <li className={styles.box}>
+            <NavLink to='/dialogs' className={({ isActive }) =>
+      isActive ? styles.active : undefined
+    }>Dialogs</NavLink>
            </li>
-          <li>
-            <NavLink to='/news'> News</NavLink>
+          <li className={styles.box}>
+            <NavLink to='/news' className={({ isActive }) =>
+      isActive ? styles.active : undefined
+    }> News</NavLink>
            </li>
-          <li>
-            <NavLink to='/music'> Music</NavLink>
+          <li className={styles.box}>
+            <NavLink to='/music' className={({ isActive }) =>
+      isActive ? styles.active : undefined
+    }> Music</NavLink>
            </li>
         </ul>
       </nav>
