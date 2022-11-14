@@ -1,9 +1,13 @@
 .posts {
-    color: crimson;
+    
+    color: rgb(35, 20, 23);
 
     
 }
 
-.posts img {
-    border-radius: 30px;
+.posts_wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
 }
+

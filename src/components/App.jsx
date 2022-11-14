@@ -10,7 +10,7 @@ import Navbar from 'Pages/Navbar/Navbar';
 import './App.css';
 import Footer from 'Pages/Footer/Footer';
 import Dialogs from './Dialogs/Dialogs';
-import { Routes,  Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import News from './News/News';
 import Music from './Music/Music';
 import NotFound from 'Pages/NotFound/NotFound';
@@ -19,35 +19,34 @@ import Portfolio from './Portfolio/Portfolio';
 import About from './About/About';
 import Contact from './Contact/Contact';
 
-export const App = (props) => {
+export const App = props => {
   return (
-    
-      <div className="app_wrapper">
-        <Header />
-        <Navbar />
+    <div className="app_wrapper">
+      <Header />
+      <Navbar />
 
-        <div className="app_wrapper-content">
-          
-          <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/portfolio" element={<Portfolio/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/contact" element={<Contact/>} />
-            <Route path="/profile" element={<Profile/>} />
-            <Route path="/dialogs" element={<Dialogs/>} />
-            <Route path="/news" element={<News/>} />
-            <Route path="/music" element={<Music/>} />
-            <Route path="*" element={<NotFound/>} />
-          
-          </Routes>
+      <div className="app_wrapper-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/profile" element={<Profile state={props.state.profilePage} 
+          addPost={props.addPost}/>} />
+          <Route path="/dialogs" element={<Dialogs />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="*" element={<NotFound />} />
 
-          {/* <Dialogs/>
+          {/* <Route path="*" render={()=><NotFound />} /> */}
+        </Routes>
+
+        {/* <Dialogs/>
           <Profile/> */}
-        </div>
-
-        <Footer />
       </div>
 
+      <Footer />
+    </div>
   );
 };
 

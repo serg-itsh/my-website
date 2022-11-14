@@ -1,16 +1,46 @@
-// import React from 'react';
+import React from 'react';
+// import React, { Component } from 'react';
 import styles from './Myposts.module.css';
-// import  './Header.module.css';
+import Post from './Post/Post';
+import posts from '../../../Data/posts.json';
 
 const Myposts = (props) => {
+ 
+ 
+  let postsElements = posts.map(p=>
+  <Post message={p.post} likesCount={p.likesCount}/>)
+
+ 
+
+   let newPostElement = React.createRef();
+
+   let addPost =()=>{
+
+
+    let text = newPostElement.current.value;
+    // alert(text)
+    props.addPost(text);
+   }
+  
   return (
   
     <div className={styles.posts}>
-        <img src="https://w7.pngwing.com/pngs/40/906/png-transparent-batman-batgirl-joker-logo-superhero-batman-comics-heroes-superhero.png" alt="" width={100}/>
-          <div>post 1</div>
-          <span>{props.name}</span>-
-          <span>like</span>
-          <textarea name="" id="" cols="5" rows="2"></textarea>
+      <h3>My posts</h3>
+      
+        
+          <div className={styles.posts_wrapper}>
+          
+          {/* <span>like</span> */}
+          <textarea ref={ newPostElement}  cols="20" rows="5"></textarea>
+          <button onClick={addPost}>Add post</button>
+          </div>
+          <div>
+            {postsElements}
+            {/* <Post message={postData[0].post} likesCount={postData[0].likesCount}/>
+            <Post message={postData[1].post} likesCount={postData[1].likesCount}/> */}
+          </div>
+          
+          
          
         </div>
 

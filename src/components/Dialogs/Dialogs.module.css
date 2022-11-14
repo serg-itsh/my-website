@@ -17,7 +17,21 @@
 
 }
 
+.items a{
+    /* padding: 10px; */
+    text-decoration: none;
+}
+
 .message{
-    padding: 10px;
+    /* padding: 10px; */
 
 }
+
+.active {
+    text-decoration: none;
+    color:rgb(81, 255, 0);
+    border-bottom: 1px solid rgb(255, 0, 0);
+      background-color: rgba(74, 68, 68, 0.3);
+    
+}
+

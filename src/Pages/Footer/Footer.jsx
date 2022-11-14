@@ -46,6 +46,10 @@ const Footer = () => {
             Dodatkowe pytania
           </div>
         </button>
+
+        {/* svg */}
+       
+
       </div>
     </footer>
   );
